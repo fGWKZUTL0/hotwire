@@ -1,0 +1,15 @@
+<div id="<%= dom_id @cat %>" class="flex items-center gap-4 shadow rounded-md border border-gray-200 outline-none my-2 p-2">
+  <div class="w-1/3">
+    <%= @cat.name %>
+  </div>
+
+  <div class="w-1/3">
+    <%= @cat.age %>
+  </div>
+
+  <div class="w-1/3 flex justify-end">
+    <%= render(Link::LinkAsButtonComponent.new(path: edit_cat_path(@cat), text: "編集", style: "bg-blue-500 hover:bg-blue-700 text-white")) %>
+    <%= render(Button::ButtonComponent.new(path: cat_path(@cat), text: "削除", method: "delete", style: "bg-red-500 hover:bg-red-700 text-white ms-2")) %>
+  </div>
+
+</div>

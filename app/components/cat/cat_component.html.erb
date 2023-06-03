@@ -1,0 +1,16 @@
+<div id="<%= dom_id @cat %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= @cat.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Age:</strong>
+    <%= @cat.age %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= render(Link::LinkAsButtonComponent.new(path: edit_cat_path(@cat), text: "編集", style: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium")) %>
+    <%= render(Button::ButtonComponent.new(path: cat_path(@cat), text: "削除", method: "delete", style: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium")) %>
+  <% end %>
+</div>

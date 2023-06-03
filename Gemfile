@@ -36,6 +36,9 @@ gem "kaminari"
 # ransack
 gem "ransack"
 
+# view_component
+gem "view_component"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
